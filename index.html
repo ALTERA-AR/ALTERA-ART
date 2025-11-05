@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrómeda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0e0e12;
+      --text: #f4f4f4;
+      --accent: #8a7ff0;
+      --muted: #a7a7a7;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: radial-gradient(circle at top right, #1d1b24, var(--bg));
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      text-align: center;
+    }
+    header {
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease forwards;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    header p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+    .art-container {
+      position: relative;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+      transform: translateY(10px);
+      animation: slideUp 1.2s ease forwards;
+    }
+    .art-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: brightness(90%);
+      transition: transform 0.8s ease, filter 0.8s ease;
+    }
+    .art-container:hover img {
+      transform: scale(1.05);
+      filter: brightness(100%);
+    }
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    }
+    .overlay h2 {
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+    .overlay span {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .cta {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+      animation: fadeIn 2s ease forwards;
+    }
+    .cta a {
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: 0 0 12px rgba(138,127,240,0.5);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+    .cta a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 22px rgba(138,127,240,0.8);
+    }
+
+    footer {
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      letter-spacing: 0.4px;
+      animation: fadeIn 2.5s ease forwards;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      
+      
+    }
+
+    .footer-banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      
+    }
+
+    .footer-banner img {
+      height: 100px;
+      width: auto;
+      opacity: 0.9;
+      transition: opacity 0.3s ease;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+    }
+
+    .footer-banner img:hover {
+      opacity: 1;
+    }
+
+    .footer p{
+        color: #fff;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>“Andrómeda”</h1>
+    <p>Obra de <strong>Sirene Arroyo</strong> — 2024</p>
+  </header>
+
+  <div class="art-container">
+    <img src="src/andro.jpg" alt="Obra artística">
+    <div class="overlay">
+      <h2>Realidad Aumentada</h2>
+      <span>Explora la pintura en 3D</span>
+    </div>
+  </div>
+
+  <div class="cta">
+    <a href="https://altera-ar.github.io/ART/" target="_blank" rel="noopener">✨ Ver en Realidad Aumentada</a>
+  </div>
+
+  <footer>
+    
+    <div class="footer-banner">
+      <img src="src/Banner.png" alt="Logos">
+    </div>
+    
+
+    <div class="footer">
+            <a href="https://www.instagram.com/altera.ar/" target="_blank"><p>@ALTERA</p></a> 
+            <a href="https://www.instagram.com/red_machine_studio/" target="_blank"><p>@red_machine_studio</p></a> 
+        </div>
+        
+    <p>Experiencia interactiva creada para la exposición 2025</p>
+  </footer>
+</body>
+</html>
